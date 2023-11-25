@@ -5,8 +5,10 @@ services:
     build: .
     restart: always
     ports:
-      - '80000:80000'
-      
+      - '8000:8000'
+    command: bash -c "cargo run"
+
+
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
